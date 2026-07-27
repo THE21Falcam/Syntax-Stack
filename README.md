@@ -7,6 +7,6 @@ Syntax Sim is a retro-inspired educational coding game where players control a r
 - Making the Menu Similer to a Operating System UI
 
 # Robot Commands
- - Move <Direction>
- - JumpToLine <Line Number>
- - Wait <Time>
+ - Move (Direction)
+ - JumpToLine (Line Number)
+ - Wait (Time)
