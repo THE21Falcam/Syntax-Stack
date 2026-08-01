@@ -13,7 +13,3 @@ func _process(delta: float) -> void:
 
 func _on_code_button_down() -> void:
 	$CanvasLayer/CONSOLE.visible = true
-
-
-func _on_run_button_down() -> void:
-	pass # Replace with function body.

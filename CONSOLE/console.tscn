@@ -16,191 +16,16 @@ grow_vertical = 2
 theme = ExtResource("1_p3b7t")
 script = ExtResource("2_7u3ff")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1588087364]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=991763227]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2592937, 0.2592937, 0.2592937, 1)
+color = Color(0.26293245, 0.26293245, 0.26293245, 1)
 
-[node name="MEMORY" type="VBoxContainer" parent="." unique_id=212928127]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 34.0
-offset_right = 264.0
-offset_bottom = 329.0
-metadata/_edit_group_ = true
-
-[node name="MLABEL" type="Label" parent="MEMORY" unique_id=890724338]
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
-text = "MEMORY"
-vertical_alignment = 1
-
-[node name="MEM0" type="HBoxContainer" parent="MEMORY" unique_id=675863216]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="LINE" type="Label" parent="MEMORY/MEM0" unique_id=774512857]
-layout_mode = 2
-text = "   0   "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DATA" type="Button" parent="MEMORY/MEM0" unique_id=930042835]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "CLICK TO ADD"
-
-[node name="MEM1" type="HBoxContainer" parent="MEMORY" unique_id=125341670]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="LINE" type="Label" parent="MEMORY/MEM1" unique_id=1500496568]
-layout_mode = 2
-text = "   1   "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DATA" type="Button" parent="MEMORY/MEM1" unique_id=1316398343]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "CLICK TO ADD"
-
-[node name="MEM2" type="HBoxContainer" parent="MEMORY" unique_id=1527352560]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="LINE" type="Label" parent="MEMORY/MEM2" unique_id=1543681874]
-layout_mode = 2
-text = "   3   "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DATA" type="Button" parent="MEMORY/MEM2" unique_id=10339643]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "CLICK TO ADD"
-
-[node name="MEM3" type="HBoxContainer" parent="MEMORY" unique_id=930918438]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="LINE" type="Label" parent="MEMORY/MEM3" unique_id=2050297515]
-layout_mode = 2
-text = "   3   "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DATA" type="Button" parent="MEMORY/MEM3" unique_id=1412875529]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "CLICK TO ADD"
-
-[node name="MEM4" type="HBoxContainer" parent="MEMORY" unique_id=469750414]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="LINE" type="Label" parent="MEMORY/MEM4" unique_id=2077407156]
-layout_mode = 2
-text = "   4   "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DATA" type="Button" parent="MEMORY/MEM4" unique_id=1374994663]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "CLICK TO ADD"
-
-[node name="MEM5" type="HBoxContainer" parent="MEMORY" unique_id=2094049525]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="LINE" type="Label" parent="MEMORY/MEM5" unique_id=1224551679]
-layout_mode = 2
-text = "   5   "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DATA" type="Button" parent="MEMORY/MEM5" unique_id=149594283]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "CLICK TO ADD"
-
-[node name="MEM6" type="HBoxContainer" parent="MEMORY" unique_id=2048253157]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="LINE" type="Label" parent="MEMORY/MEM6" unique_id=1203072083]
-layout_mode = 2
-text = "   6   "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DATA" type="Button" parent="MEMORY/MEM6" unique_id=776364532]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "CLICK TO ADD"
-
-[node name="MEM7" type="HBoxContainer" parent="MEMORY" unique_id=323128281]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="LINE" type="Label" parent="MEMORY/MEM7" unique_id=1794199223]
-layout_mode = 2
-text = "   7   "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DATA" type="Button" parent="MEMORY/MEM7" unique_id=907238005]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "CLICK TO ADD"
-
-[node name="BACK" type="Button" parent="." unique_id=280995898]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 172.5
-offset_top = 91.5
-offset_right = 277.5
-offset_bottom = 144.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "BACK"
-
-[node name="COMMAND" type="Control" parent="." unique_id=932295798]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="COMMAND" unique_id=991763227]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.63304174, 0.32022953, 0.5633168, 1)
-
-[node name="ADD" type="Button" parent="COMMAND" unique_id=1678186251]
+[node name="ADD" type="Button" parent="." unique_id=1678186251]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -216,7 +41,7 @@ grow_vertical = 2
 text = "+"
 icon_alignment = 1
 
-[node name="CHOOSE" type="GridContainer" parent="COMMAND" unique_id=1884519428]
+[node name="CHOOSE" type="GridContainer" parent="." unique_id=1884519428]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -233,36 +58,52 @@ grow_vertical = 2
 columns = 2
 metadata/_edit_group_ = true
 
-[node name="MOVE" type="Button" parent="COMMAND/CHOOSE" unique_id=1244574008]
+[node name="MOVE" type="Button" parent="CHOOSE" unique_id=1244574008]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "MOVE"
 
-[node name="JUMPLINE" type="Button" parent="COMMAND/CHOOSE" unique_id=1020031346]
+[node name="JUMPLINE" type="Button" parent="CHOOSE" unique_id=1020031346]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "JUMP TO LINE"
 
-[node name="SOON" type="Button" parent="COMMAND/CHOOSE" unique_id=1525957770]
+[node name="SOON" type="Button" parent="CHOOSE" unique_id=1525957770]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "SOON"
 
-[node name="SOON2" type="Button" parent="COMMAND/CHOOSE" unique_id=546449471]
+[node name="SOON2" type="Button" parent="CHOOSE" unique_id=546449471]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "SOON"
 
-[node name="SHOW" type="Control" parent="COMMAND" unique_id=727168791]
+[node name="SHOW" type="Control" parent="." unique_id=727168791]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BACK" type="Button" parent="." unique_id=280995898]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 299.5
+offset_top = 166.5
+offset_right = 404.5
+offset_bottom = 219.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "BACK"
 
 [connection signal="button_down" from="BACK" to="." method="_on_back_button_down"]

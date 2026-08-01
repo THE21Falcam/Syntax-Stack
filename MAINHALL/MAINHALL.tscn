@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://btukydnstohtu" path="res://MAINHALL/mainhall.gd" id="1_uuks4"]
 [ext_resource type="PackedScene" uid="uid://6kyepprekn81" path="res://CONSOLE/console.tscn" id="2_uuks4"]
 [ext_resource type="TileSet" uid="uid://1bmftsav1kh2" path="res://Assets/AreaTile.tres" id="4_d5y1l"]
+[ext_resource type="Theme" uid="uid://xc2uxfpyhuew" path="res://Assets/THEME.tres" id="4_ljkc5"]
 [ext_resource type="PackedScene" uid="uid://cfyttkjn0p3ac" path="res://ROBOT/ROBOT.tscn" id="4_uuks4"]
 
 [node name="MAINHALL" type="Node2D" unique_id=1131288163]
@@ -21,18 +22,154 @@ tile_set = ExtResource("4_d5y1l")
 [node name="ROBOT" parent="." unique_id=841810180 instance=ExtResource("4_uuks4")]
 position = Vector2(176, 142)
 
-[node name="CODE" type="Button" parent="." unique_id=319392209]
-offset_left = 129.0
-offset_top = 23.0
-offset_right = 181.0
-offset_bottom = 54.0
-text = "CODE"
+[node name="MEMORY" type="VBoxContainer" parent="." unique_id=38005773]
+offset_left = -162.0
+offset_top = 14.0
+offset_right = 63.0
+offset_bottom = 330.0
+theme = ExtResource("4_ljkc5")
+metadata/_edit_group_ = true
+
+[node name="MLABEL" type="Label" parent="MEMORY" unique_id=101709216]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "MEMORY"
+vertical_alignment = 1
+
+[node name="MEM0" type="HBoxContainer" parent="MEMORY" unique_id=1042502996]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LINE" type="Label" parent="MEMORY/MEM0" unique_id=1997363373]
+layout_mode = 2
+text = "   0   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DATA" type="Button" parent="MEMORY/MEM0" unique_id=730888421]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLICK TO ADD"
+
+[node name="MEM1" type="HBoxContainer" parent="MEMORY" unique_id=1791831155]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LINE" type="Label" parent="MEMORY/MEM1" unique_id=2144716371]
+layout_mode = 2
+text = "   1   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DATA" type="Button" parent="MEMORY/MEM1" unique_id=605941770]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLICK TO ADD"
+
+[node name="MEM2" type="HBoxContainer" parent="MEMORY" unique_id=1694863170]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LINE" type="Label" parent="MEMORY/MEM2" unique_id=538437824]
+layout_mode = 2
+text = "   3   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DATA" type="Button" parent="MEMORY/MEM2" unique_id=1378688876]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLICK TO ADD"
+
+[node name="MEM3" type="HBoxContainer" parent="MEMORY" unique_id=475199659]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LINE" type="Label" parent="MEMORY/MEM3" unique_id=170982597]
+layout_mode = 2
+text = "   3   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DATA" type="Button" parent="MEMORY/MEM3" unique_id=145456627]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLICK TO ADD"
+
+[node name="MEM4" type="HBoxContainer" parent="MEMORY" unique_id=236609729]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LINE" type="Label" parent="MEMORY/MEM4" unique_id=682931523]
+layout_mode = 2
+text = "   4   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DATA" type="Button" parent="MEMORY/MEM4" unique_id=627990928]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLICK TO ADD"
+
+[node name="MEM5" type="HBoxContainer" parent="MEMORY" unique_id=944073635]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LINE" type="Label" parent="MEMORY/MEM5" unique_id=1289459141]
+layout_mode = 2
+text = "   5   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DATA" type="Button" parent="MEMORY/MEM5" unique_id=871871788]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLICK TO ADD"
+
+[node name="MEM6" type="HBoxContainer" parent="MEMORY" unique_id=532172989]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LINE" type="Label" parent="MEMORY/MEM6" unique_id=2027150471]
+layout_mode = 2
+text = "   6   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DATA" type="Button" parent="MEMORY/MEM6" unique_id=635692203]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLICK TO ADD"
+
+[node name="MEM7" type="HBoxContainer" parent="MEMORY" unique_id=1753062137]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LINE" type="Label" parent="MEMORY/MEM7" unique_id=992567303]
+layout_mode = 2
+text = "   7   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DATA" type="Button" parent="MEMORY/MEM7" unique_id=1950959886]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLICK TO ADD"
 
 [node name="RUN" type="Button" parent="." unique_id=30958747]
-offset_left = 468.0
-offset_top = 299.0
-offset_right = 511.0
-offset_bottom = 330.0
+offset_left = 422.0
+offset_top = 308.0
+offset_right = 525.0
+offset_bottom = 357.0
+theme = ExtResource("4_ljkc5")
 text = "RUN"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1393886291]
@@ -44,5 +181,4 @@ offset_top = 1.0
 offset_right = 0.0
 offset_bottom = 0.0
 
-[connection signal="button_down" from="CODE" to="." method="_on_code_button_down"]
 [connection signal="button_down" from="RUN" to="." method="_on_run_button_down"]
