@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,5 +11,9 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_back_button_down() -> void:
-	self.visible = false
+func _on_code_button_down() -> void:
+	$CanvasLayer/CONSOLE.visible = true
+
+
+func _on_run_button_down() -> void:
+	pass # Replace with function body.

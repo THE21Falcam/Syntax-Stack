@@ -16,3 +16,7 @@ func MOVE():
 		MOVING = true
 		await HeadTween.finished
 		MOVING = false
+
+
+func _on_code_button_down() -> void:
+	pass # Replace with function body.
