@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://wa2ainw73s4a"]
 
 [ext_resource type="Theme" uid="uid://xc2uxfpyhuew" path="res://Assets/THEME.tres" id="1_flj6l"]
+[ext_resource type="Script" uid="uid://bp8gwscpbllbd" path="res://COMMANDS/JumpToLine/jump_2_line.gd" id="2_h0wpt"]
 [ext_resource type="FontFile" uid="uid://dgd4yq20pd3xq" path="res://Assets/m6x11.ttf" id="2_mrjx8"]
 
 [node name="Jump2Line" type="Control" unique_id=933161840]
@@ -19,6 +20,7 @@ offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_flj6l")
+script = ExtResource("2_h0wpt")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=793723616]
 layout_mode = 1
@@ -98,4 +100,4 @@ text = "LINE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="button_up" from="REMOVE" to="." method="_on_button_2_button_up"]
+[connection signal="button_down" from="REMOVE" to="." method="_on_remove_button_down"]

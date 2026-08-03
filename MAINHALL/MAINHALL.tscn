@@ -1,40 +1,65 @@
 [gd_scene format=4 uid="uid://clia4ebdghccc"]
 
 [ext_resource type="Script" uid="uid://btukydnstohtu" path="res://MAINHALL/mainhall.gd" id="1_uuks4"]
-[ext_resource type="PackedScene" uid="uid://6kyepprekn81" path="res://CONSOLE/console.tscn" id="2_uuks4"]
 [ext_resource type="TileSet" uid="uid://1bmftsav1kh2" path="res://Assets/AreaTile.tres" id="4_d5y1l"]
 [ext_resource type="Theme" uid="uid://xc2uxfpyhuew" path="res://Assets/THEME.tres" id="4_ljkc5"]
 [ext_resource type="PackedScene" uid="uid://cfyttkjn0p3ac" path="res://ROBOT/ROBOT.tscn" id="4_uuks4"]
+[ext_resource type="Script" uid="uid://cn3ty0gvlrmkd" path="res://MAINHALL/memory.gd" id="5_yo7is"]
+[ext_resource type="Script" uid="uid://nn36xgmh1nli" path="res://MAINHALL/control.gd" id="6_yo7is"]
 
 [node name="MAINHALL" type="Node2D" unique_id=1131288163]
 texture_filter = 1
 script = ExtResource("1_uuks4")
 
-[node name="CAMERA" type="Camera2D" parent="." unique_id=222918406]
-position = Vector2(320, 180)
+[node name="CAMERA" type="Camera2D" parent="." unique_id=260330107]
+position = Vector2(576, 324)
 
 [node name="PLAYGROUND" type="TileMapLayer" parent="." unique_id=571641307]
 position = Vector2(0, -2)
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAAEAAMAAgABAAEAAAAFAAMAAgABAAEAAAAFAAQAAgABAAEAAAAEAAQAAgABAAEAAAADAAQAAgAAAAEAAAADAAMAAgAAAAEAAAADAAIAAgAAAAAAAAAEAAIAAgABAAAAAAAFAAIAAgABAAAAAAAGAAMAAgABAAEAAAAGAAQAAgABAAEAAAAGAAIAAgABAAAAAAAGAAUAAgABAAEAAAAFAAUAAgABAAEAAAAEAAUAAgABAAEAAAAHAAQAAgABAAEAAAAHAAUAAgABAAEAAAAHAAMAAgABAAEAAAAIAAQAAgABAAEAAAAIAAUAAgABAAEAAAAIAAMAAgABAAEAAAAJAAUAAgABAAEAAAAJAAYAAgABAAEAAAAIAAYAAgABAAEAAAAHAAYAAgABAAEAAAAJAAQAAgABAAEAAAAKAAUAAgABAAEAAAAKAAYAAgABAAEAAAAKAAQAAgABAAEAAAALAAUAAgABAAEAAAALAAYAAgABAAEAAAALAAQAAgABAAEAAAAMAAUAAgABAAEAAAAMAAYAAgABAAEAAAAMAAQAAgABAAEAAAALAAMAAgABAAEAAAAKAAMAAgABAAEAAAAJAAMAAgABAAEAAAAGAAYAAgABAAEAAAAFAAYAAgABAAEAAAAEAAYAAgABAAEAAAADAAUAAgAAAAEAAAADAAYAAgAAAAEAAAAFAAcAAgABAAEAAAAEAAcAAgABAAEAAAADAAcAAgAAAAEAAAAGAAcAAgABAAEAAAAHAAIAAgABAAAAAAAHAAcAAgABAAEAAAAIAAIAAgABAAAAAAAIAAcAAgABAAEAAAAJAAIAAgABAAAAAAAJAAcAAgABAAEAAAAKAAIAAgABAAAAAAAKAAcAAgABAAEAAAALAAIAAgABAAAAAAALAAcAAgABAAEAAAAMAAMAAgABAAEAAAAMAAIAAgABAAAAAAAMAAcAAgABAAEAAAANAAMAAgABAAEAAAAOAAMAAgABAAEAAAAOAAQAAgABAAEAAAANAAQAAgABAAEAAAANAAIAAgABAAAAAAAOAAIAAgABAAAAAAAOAAUAAgABAAEAAAANAAUAAgABAAEAAAAOAAYAAgABAAEAAAANAAYAAgABAAEAAAAOAAcAAgABAAEAAAANAAcAAgABAAEAAAANAAgAAgABAAIAAAAMAAgAAgABAAIAAAALAAgAAgABAAIAAAAKAAgAAgABAAIAAAAJAAgAAgABAAIAAAAIAAgAAgABAAIAAAAHAAgAAgABAAIAAAAGAAgAAgABAAIAAAAFAAgAAgABAAIAAAAEAAgAAgABAAIAAAADAAgAAgAAAAIAAAAOAAgAAgABAAIAAAAPAAMAAgABAAEAAAAPAAQAAgABAAEAAAAPAAIAAgABAAAAAAAPAAUAAgABAAEAAAAPAAYAAgABAAEAAAAPAAcAAgABAAEAAAAPAAgAAgABAAIAAAAQAAMAAgACAAEAAAAQAAQAAgACAAEAAAAQAAIAAgACAAAAAAAQAAUAAgACAAEAAAAQAAYAAgACAAEAAAAQAAcAAgACAAEAAAAQAAgAAgACAAIAAAA=")
+tile_map_data = PackedByteArray("AAAdAA0AAgABAAEAAAAdAAwAAgABAAEAAAAdAAsAAgABAAEAAAAdAAoAAgABAAEAAAAdAAkAAgABAAEAAAAdAAgAAgABAAEAAAAdAAcAAgABAAEAAAAdAAYAAgABAAEAAAAcAA0AAgABAAEAAAAcAAwAAgABAAEAAAAcAAsAAgABAAEAAAAcAAoAAgABAAEAAAAcAAkAAgABAAEAAAAcAAgAAgABAAEAAAAcAAcAAgABAAEAAAAcAAYAAgABAAEAAAAbAA0AAgABAAEAAAAbAAwAAgABAAEAAAAbAAsAAgABAAEAAAAbAAoAAgABAAEAAAAbAAkAAgABAAEAAAAbAAgAAgABAAEAAAAbAAcAAgABAAEAAAAbAAYAAgABAAEAAAAaAA0AAgABAAEAAAAaAAwAAgABAAEAAAAaAAsAAgABAAEAAAAaAAoAAgABAAEAAAAaAAkAAgABAAEAAAAaAAgAAgABAAEAAAAaAAcAAgABAAEAAAAaAAYAAgABAAEAAAAZAA0AAgABAAEAAAAZAAwAAgABAAEAAAAZAAsAAgABAAEAAAAZAAoAAgABAAEAAAAZAAkAAgABAAEAAAAZAAgAAgABAAEAAAAZAAcAAgABAAEAAAAZAAYAAgABAAEAAAAYAA0AAgABAAEAAAAYAAwAAgABAAEAAAAYAAsAAgABAAEAAAAYAAoAAgABAAEAAAAYAAkAAgABAAEAAAAYAAgAAgABAAEAAAAYAAcAAgABAAEAAAAYAAYAAgABAAEAAAAXAA0AAgABAAEAAAAXAAwAAgABAAEAAAAXAAsAAgABAAEAAAAXAAoAAgABAAEAAAAXAAkAAgABAAEAAAAXAAgAAgABAAEAAAAXAAcAAgABAAEAAAAXAAYAAgABAAEAAAAWAA0AAgABAAEAAAAWAAwAAgABAAEAAAAWAAsAAgABAAEAAAAWAAoAAgABAAEAAAAWAAkAAgABAAEAAAAWAAgAAgABAAEAAAAWAAcAAgABAAEAAAAWAAYAAgABAAEAAAAVAA0AAgABAAEAAAAVAAwAAgABAAEAAAAVAAsAAgABAAEAAAAVAAoAAgABAAEAAAAVAAkAAgABAAEAAAAVAAgAAgABAAEAAAAVAAcAAgABAAEAAAAVAAYAAgABAAEAAAAUAA0AAgABAAEAAAAUAAwAAgABAAEAAAAUAAsAAgABAAEAAAAUAAoAAgABAAEAAAAUAAkAAgABAAEAAAAUAAgAAgABAAEAAAAUAAcAAgABAAEAAAAUAAYAAgABAAEAAAATAA0AAgABAAEAAAATAAwAAgABAAEAAAATAAsAAgABAAEAAAATAAoAAgABAAEAAAATAAkAAgABAAEAAAATAAgAAgABAAEAAAATAAcAAgABAAEAAAATAAYAAgABAAEAAAASAA0AAgABAAEAAAASAAwAAgABAAEAAAASAAsAAgABAAEAAAASAAoAAgABAAEAAAASAAkAAgABAAEAAAASAAgAAgABAAEAAAASAAcAAgABAAEAAAASAAYAAgABAAEAAAARAA0AAgABAAEAAAARAAwAAgABAAEAAAARAAsAAgABAAEAAAARAAoAAgABAAEAAAARAAkAAgABAAEAAAARAAgAAgABAAEAAAARAAcAAgABAAEAAAARAAYAAgABAAEAAAAQAAcAAgAAAAEAAAAQAAYAAgAAAAEAAAAQAAUAAgAAAAAAAAARAAUAAgABAAAAAAASAAUAAgABAAAAAAAQAAgAAgAAAAEAAAAQAAkAAgAAAAEAAAAQAAoAAgAAAAEAAAAQAAsAAgAAAAEAAAAQAAwAAgAAAAEAAAAQAA0AAgAAAAEAAAASAA4AAgABAAIAAAARAA4AAgABAAIAAAAQAA4AAgAAAAIAAAATAAUAAgABAAAAAAATAA4AAgABAAIAAAAUAAUAAgABAAAAAAAUAA4AAgABAAIAAAAVAAUAAgABAAAAAAAVAA4AAgABAAIAAAAWAAUAAgABAAAAAAAWAA4AAgABAAIAAAAXAAUAAgABAAAAAAAXAA4AAgABAAIAAAAYAAUAAgABAAAAAAAYAA4AAgABAAIAAAAZAAUAAgABAAAAAAAZAA4AAgABAAIAAAAaAAUAAgABAAAAAAAaAA4AAgABAAIAAAAbAAUAAgABAAAAAAAbAA4AAgABAAIAAAAcAAUAAgABAAAAAAAcAA4AAgABAAIAAAAdAAUAAgABAAAAAAAdAA4AAgABAAIAAAAeAAYAAgACAAEAAAAeAAcAAgACAAEAAAAeAAUAAgACAAAAAAAeAAgAAgACAAEAAAAeAAkAAgACAAEAAAAeAAoAAgACAAEAAAAeAAsAAgACAAEAAAAeAAwAAgACAAEAAAAeAA0AAgACAAEAAAAeAA4AAgACAAIAAAA=")
 tile_set = ExtResource("4_d5y1l")
 
 [node name="ROBOT" parent="." unique_id=841810180 instance=ExtResource("4_uuks4")]
-position = Vector2(176, 142)
+position = Vector2(784, 304)
 
-[node name="MEMORY" type="VBoxContainer" parent="." unique_id=38005773]
-offset_left = -162.0
-offset_top = 14.0
-offset_right = 63.0
-offset_bottom = 330.0
+[node name="ISLAND" type="Label" parent="." unique_id=411847880]
+offset_left = 551.0
+offset_top = 140.0
+offset_right = 655.0
+offset_bottom = 167.0
 theme = ExtResource("4_ljkc5")
-metadata/_edit_group_ = true
+theme_override_font_sizes/font_size = 26
+text = "ISLAND"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MLABEL" type="Label" parent="MEMORY" unique_id=101709216]
-layout_mode = 2
+[node name="MLABEL" type="Label" parent="." unique_id=101709216]
+offset_left = 240.0
+offset_top = 96.0
+offset_right = 344.0
+offset_bottom = 123.0
+theme = ExtResource("4_ljkc5")
 theme_override_font_sizes/font_size = 26
 text = "MEMORY"
 vertical_alignment = 1
+
+[node name="MEMORY" type="VBoxContainer" parent="." unique_id=38005773]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 149.0
+offset_top = 132.0
+offset_right = 436.0
+offset_bottom = 548.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_ljkc5")
+script = ExtResource("5_yo7is")
+metadata/_edit_group_ = true
 
 [node name="MEM0" type="HBoxContainer" parent="MEMORY" unique_id=1042502996]
 layout_mode = 2
@@ -42,9 +67,11 @@ size_flags_vertical = 3
 
 [node name="LINE" type="Label" parent="MEMORY/MEM0" unique_id=1997363373]
 layout_mode = 2
-text = "   0   "
+theme_override_font_sizes/font_size = 26
+text = " 0 "
 horizontal_alignment = 1
 vertical_alignment = 1
+text_direction = 1
 
 [node name="DATA" type="Button" parent="MEMORY/MEM0" unique_id=730888421]
 layout_mode = 2
@@ -58,7 +85,8 @@ size_flags_vertical = 3
 
 [node name="LINE" type="Label" parent="MEMORY/MEM1" unique_id=2144716371]
 layout_mode = 2
-text = "   1   "
+theme_override_font_sizes/font_size = 26
+text = "  1 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -74,7 +102,8 @@ size_flags_vertical = 3
 
 [node name="LINE" type="Label" parent="MEMORY/MEM2" unique_id=538437824]
 layout_mode = 2
-text = "   3   "
+theme_override_font_sizes/font_size = 26
+text = "  2 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -90,7 +119,8 @@ size_flags_vertical = 3
 
 [node name="LINE" type="Label" parent="MEMORY/MEM3" unique_id=170982597]
 layout_mode = 2
-text = "   3   "
+theme_override_font_sizes/font_size = 26
+text = "  3 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -106,7 +136,8 @@ size_flags_vertical = 3
 
 [node name="LINE" type="Label" parent="MEMORY/MEM4" unique_id=682931523]
 layout_mode = 2
-text = "   4   "
+theme_override_font_sizes/font_size = 26
+text = "  4 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -122,7 +153,8 @@ size_flags_vertical = 3
 
 [node name="LINE" type="Label" parent="MEMORY/MEM5" unique_id=1289459141]
 layout_mode = 2
-text = "   5   "
+theme_override_font_sizes/font_size = 26
+text = "  5 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -138,7 +170,8 @@ size_flags_vertical = 3
 
 [node name="LINE" type="Label" parent="MEMORY/MEM6" unique_id=2027150471]
 layout_mode = 2
-text = "   6   "
+theme_override_font_sizes/font_size = 26
+text = "  6 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -154,7 +187,8 @@ size_flags_vertical = 3
 
 [node name="LINE" type="Label" parent="MEMORY/MEM7" unique_id=992567303]
 layout_mode = 2
-text = "   7   "
+theme_override_font_sizes/font_size = 26
+text = "  7 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -164,21 +198,141 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "CLICK TO ADD"
 
-[node name="RUN" type="Button" parent="." unique_id=30958747]
-offset_left = 422.0
-offset_top = 308.0
-offset_right = 525.0
-offset_bottom = 357.0
+[node name="STOP" type="Button" parent="." unique_id=1159468571]
+offset_left = 696.0
+offset_top = 496.0
+offset_right = 821.0
+offset_bottom = 559.0
 theme = ExtResource("4_ljkc5")
+theme_override_font_sizes/font_size = 26
+text = "STOP"
+
+[node name="RUN" type="Button" parent="." unique_id=30958747]
+offset_left = 840.0
+offset_top = 496.0
+offset_right = 961.0
+offset_bottom = 559.0
+theme = ExtResource("4_ljkc5")
+theme_override_font_sizes/font_size = 26
 text = "RUN"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1393886291]
+[node name="CanvasLayer" type="CanvasLayer" parent="RUN" unique_id=1393886291]
 
-[node name="CONSOLE" parent="CanvasLayer" unique_id=861182494 instance=ExtResource("2_uuks4")]
+[node name="CONTROL" type="Control" parent="RUN/CanvasLayer" unique_id=1896902703]
 visible = false
-offset_left = -1.0
-offset_top = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_ljkc5")
+script = ExtResource("6_yo7is")
 
+[node name="BACKGROUND" type="ColorRect" parent="RUN/CanvasLayer/CONTROL" unique_id=1476854072]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12941177, 0.13333334, 0.16078432, 1)
+
+[node name="ADD" type="Button" parent="RUN/CanvasLayer/CONTROL" unique_id=1191669415]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -16.75
+offset_right = 24.0
+offset_bottom = 16.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "+"
+icon_alignment = 1
+
+[node name="CHOOSE" type="GridContainer" parent="RUN/CanvasLayer/CONTROL" unique_id=560667027]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.5
+offset_top = -58.5
+offset_right = 129.5
+offset_bottom = 58.5
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+metadata/_edit_group_ = true
+
+[node name="MOVE" type="Button" parent="RUN/CanvasLayer/CONTROL/CHOOSE" unique_id=1264823607]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MOVE"
+
+[node name="JUMPLINE" type="Button" parent="RUN/CanvasLayer/CONTROL/CHOOSE" unique_id=1785862697]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "JUMP TO LINE"
+
+[node name="SOON" type="Button" parent="RUN/CanvasLayer/CONTROL/CHOOSE" unique_id=517188666]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SOON"
+
+[node name="SOON2" type="Button" parent="RUN/CanvasLayer/CONTROL/CHOOSE" unique_id=14001927]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "SOON"
+
+[node name="SHOW" type="Control" parent="RUN/CanvasLayer/CONTROL" unique_id=330011667]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BACK" type="Button" parent="RUN/CanvasLayer/CONTROL" unique_id=366381790]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 280.0
+offset_top = 158.0
+offset_right = 424.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+
+[connection signal="button_down" from="MEMORY/MEM0/DATA" to="MEMORY" method="mem0"]
+[connection signal="button_down" from="MEMORY/MEM1/DATA" to="MEMORY" method="mem1"]
+[connection signal="button_down" from="MEMORY/MEM2/DATA" to="MEMORY" method="mem2"]
+[connection signal="button_down" from="MEMORY/MEM3/DATA" to="MEMORY" method="mem3"]
+[connection signal="button_down" from="MEMORY/MEM4/DATA" to="MEMORY" method="mem4"]
+[connection signal="button_down" from="MEMORY/MEM5/DATA" to="MEMORY" method="mem5"]
+[connection signal="button_down" from="MEMORY/MEM6/DATA" to="MEMORY" method="mem6"]
+[connection signal="button_down" from="MEMORY/MEM7/DATA" to="MEMORY" method="mem7"]
 [connection signal="button_down" from="RUN" to="." method="_on_run_button_down"]
+[connection signal="button_down" from="RUN/CanvasLayer/CONTROL/ADD" to="RUN/CanvasLayer/CONTROL" method="_on_add_button_down"]
+[connection signal="button_down" from="RUN/CanvasLayer/CONTROL/CHOOSE/MOVE" to="RUN/CanvasLayer/CONTROL" method="_on_move_button_down"]
+[connection signal="button_down" from="RUN/CanvasLayer/CONTROL/CHOOSE/JUMPLINE" to="RUN/CanvasLayer/CONTROL" method="_on_jumpline_button_down"]
+[connection signal="button_down" from="RUN/CanvasLayer/CONTROL/BACK" to="RUN/CanvasLayer/CONTROL" method="_on_back_button_down"]

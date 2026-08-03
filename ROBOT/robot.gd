@@ -7,8 +7,12 @@ var TILE_SIZE = 32
 var MOVING = false
 
 func _process(delta: float) -> void:
+	if MOVING:
+		return
+	
 	$ANCOR.rotation = DIRECTION.angle()
-
+	RAYCAST.target_position = DIRECTION * TILE_SIZE 
+	
 func MOVE():
 	if !RAYCAST.is_colliding():
 		var HeadTween = get_tree().create_tween()
@@ -16,7 +20,3 @@ func MOVE():
 		MOVING = true
 		await HeadTween.finished
 		MOVING = false
-
-
-func _on_code_button_down() -> void:
-	pass # Replace with function body.

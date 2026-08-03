@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://xc2uxfpyhuew" path="res://Assets/THEME.tres" id="1_onk2h"]
 [ext_resource type="FontFile" uid="uid://dgd4yq20pd3xq" path="res://Assets/m6x11.ttf" id="1_t6p4u"]
+[ext_resource type="Script" uid="uid://dqksx4rtchmtp" path="res://COMMANDS/Move/move.gd" id="2_684j7"]
 
 [node name="Move" type="Control" unique_id=933161840]
 texture_filter = 1
@@ -19,6 +20,7 @@ offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_onk2h")
+script = ExtResource("2_684j7")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=793723616]
 layout_mode = 1
@@ -140,4 +142,4 @@ text = "DIRECTION"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="button_up" from="REMOVE" to="." method="_on_button_2_button_up"]
+[connection signal="button_down" from="REMOVE" to="." method="_on_remove_button_down"]
