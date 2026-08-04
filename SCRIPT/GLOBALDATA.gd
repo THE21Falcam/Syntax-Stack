@@ -26,3 +26,4 @@ var DATA = {
 		
 	}
 }
+var REG = {}

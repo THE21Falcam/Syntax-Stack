@@ -216,9 +216,9 @@ theme = ExtResource("4_ljkc5")
 theme_override_font_sizes/font_size = 26
 text = "RUN"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="RUN" unique_id=1393886291]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1393886291]
 
-[node name="CONTROL" type="Control" parent="RUN/CanvasLayer" unique_id=1896902703]
+[node name="CONTROL" type="Control" parent="CanvasLayer" unique_id=1896902703]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -229,18 +229,16 @@ grow_vertical = 2
 theme = ExtResource("4_ljkc5")
 script = ExtResource("6_yo7is")
 
-[node name="BACKGROUND" type="ColorRect" parent="RUN/CanvasLayer/CONTROL" unique_id=1476854072]
+[node name="BACKGROUND" type="ColorRect" parent="CanvasLayer/CONTROL" unique_id=1476854072]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_right = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.12941177, 0.13333334, 0.16078432, 1)
+color = Color(0.16078432, 0.16862746, 0.2, 1)
 
-[node name="ADD" type="Button" parent="RUN/CanvasLayer/CONTROL" unique_id=1191669415]
+[node name="ADD" type="Button" parent="CanvasLayer/CONTROL" unique_id=1191669415]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -257,7 +255,7 @@ theme_override_font_sizes/font_size = 26
 text = "+"
 icon_alignment = 1
 
-[node name="CHOOSE" type="GridContainer" parent="RUN/CanvasLayer/CONTROL" unique_id=560667027]
+[node name="CHOOSE" type="GridContainer" parent="CanvasLayer/CONTROL" unique_id=560667027]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -265,40 +263,40 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -129.5
-offset_top = -58.5
-offset_right = 129.5
-offset_bottom = 58.5
+offset_left = -184.0
+offset_top = -100.0
+offset_right = 184.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 metadata/_edit_group_ = true
 
-[node name="MOVE" type="Button" parent="RUN/CanvasLayer/CONTROL/CHOOSE" unique_id=1264823607]
+[node name="MOVE" type="Button" parent="CanvasLayer/CONTROL/CHOOSE" unique_id=1264823607]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "MOVE"
 
-[node name="JUMPLINE" type="Button" parent="RUN/CanvasLayer/CONTROL/CHOOSE" unique_id=1785862697]
+[node name="JUMPLINE" type="Button" parent="CanvasLayer/CONTROL/CHOOSE" unique_id=1785862697]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "JUMP TO LINE"
 
-[node name="SOON" type="Button" parent="RUN/CanvasLayer/CONTROL/CHOOSE" unique_id=517188666]
+[node name="SOON" type="Button" parent="CanvasLayer/CONTROL/CHOOSE" unique_id=517188666]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "SOON"
 
-[node name="SOON2" type="Button" parent="RUN/CanvasLayer/CONTROL/CHOOSE" unique_id=14001927]
+[node name="SOON2" type="Button" parent="CanvasLayer/CONTROL/CHOOSE" unique_id=14001927]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "SOON"
 
-[node name="SHOW" type="Control" parent="RUN/CanvasLayer/CONTROL" unique_id=330011667]
+[node name="SHOW" type="Control" parent="CanvasLayer/CONTROL" unique_id=330011667]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -307,7 +305,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BACK" type="Button" parent="RUN/CanvasLayer/CONTROL" unique_id=366381790]
+[node name="BACK" type="Button" parent="CanvasLayer/CONTROL" unique_id=366381790]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -323,6 +321,168 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 26
 text = "BACK"
 
+[node name="DATA" type="VBoxContainer" parent="CanvasLayer/CONTROL" unique_id=1772254814]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -148.0
+offset_right = -288.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_ljkc5")
+script = ExtResource("5_yo7is")
+metadata/_edit_group_ = true
+
+[node name="REG1" type="HBoxContainer" parent="CanvasLayer/CONTROL/DATA" unique_id=144707017]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/CONTROL/DATA/REG1" unique_id=1132833604]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/CONTROL/DATA/REG1/ColorRect2" unique_id=994110668]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "REG 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/CONTROL/DATA/REG1" unique_id=742827416]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.2592937, 0.2592937, 0.2592937, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/CONTROL/DATA/REG1/ColorRect" unique_id=1797757462]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EMPTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="REG2" type="HBoxContainer" parent="CanvasLayer/CONTROL/DATA" unique_id=415882162]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/CONTROL/DATA/REG2" unique_id=175397633]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/CONTROL/DATA/REG2/ColorRect2" unique_id=719694015]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "REG 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/CONTROL/DATA/REG2" unique_id=1594703172]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.2592937, 0.2592937, 0.2592937, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/CONTROL/DATA/REG2/ColorRect" unique_id=95820534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EMPTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="REG3" type="HBoxContainer" parent="CanvasLayer/CONTROL/DATA" unique_id=1097320764]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/CONTROL/DATA/REG3" unique_id=843821766]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/CONTROL/DATA/REG3/ColorRect2" unique_id=1598076884]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "REG 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/CONTROL/DATA/REG3" unique_id=1388906854]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.2592937, 0.2592937, 0.2592937, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/CONTROL/DATA/REG3/ColorRect" unique_id=376442274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EMPTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="REG4" type="HBoxContainer" parent="CanvasLayer/CONTROL/DATA" unique_id=780449503]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/CONTROL/DATA/REG4" unique_id=2080527357]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/CONTROL/DATA/REG4/ColorRect2" unique_id=503431930]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "REG 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/CONTROL/DATA/REG4" unique_id=57930825]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.2592937, 0.2592937, 0.2592937, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/CONTROL/DATA/REG4/ColorRect" unique_id=1912500377]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EMPTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="button_down" from="MEMORY/MEM0/DATA" to="MEMORY" method="mem0"]
 [connection signal="button_down" from="MEMORY/MEM1/DATA" to="MEMORY" method="mem1"]
 [connection signal="button_down" from="MEMORY/MEM2/DATA" to="MEMORY" method="mem2"]
@@ -332,7 +492,7 @@ text = "BACK"
 [connection signal="button_down" from="MEMORY/MEM6/DATA" to="MEMORY" method="mem6"]
 [connection signal="button_down" from="MEMORY/MEM7/DATA" to="MEMORY" method="mem7"]
 [connection signal="button_down" from="RUN" to="." method="_on_run_button_down"]
-[connection signal="button_down" from="RUN/CanvasLayer/CONTROL/ADD" to="RUN/CanvasLayer/CONTROL" method="_on_add_button_down"]
-[connection signal="button_down" from="RUN/CanvasLayer/CONTROL/CHOOSE/MOVE" to="RUN/CanvasLayer/CONTROL" method="_on_move_button_down"]
-[connection signal="button_down" from="RUN/CanvasLayer/CONTROL/CHOOSE/JUMPLINE" to="RUN/CanvasLayer/CONTROL" method="_on_jumpline_button_down"]
-[connection signal="button_down" from="RUN/CanvasLayer/CONTROL/BACK" to="RUN/CanvasLayer/CONTROL" method="_on_back_button_down"]
+[connection signal="button_down" from="CanvasLayer/CONTROL/ADD" to="CanvasLayer/CONTROL" method="_on_add_button_down"]
+[connection signal="button_down" from="CanvasLayer/CONTROL/CHOOSE/MOVE" to="CanvasLayer/CONTROL" method="_on_move_button_down"]
+[connection signal="button_down" from="CanvasLayer/CONTROL/CHOOSE/JUMPLINE" to="CanvasLayer/CONTROL" method="_on_jumpline_button_down"]
+[connection signal="button_down" from="CanvasLayer/CONTROL/BACK" to="CanvasLayer/CONTROL" method="_on_back_button_down"]

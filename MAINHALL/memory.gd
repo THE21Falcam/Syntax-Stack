@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-@onready var CONSOLE = $"../RUN/CanvasLayer/CONTROL"
+@onready var CONSOLE = $"../CanvasLayer/CONTROL"
 
 func mem0() -> void:
 	CONSOLE.visible = true
